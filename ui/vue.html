@@ -114,7 +114,6 @@
                         </div>
                         <div class="card-body text-align-items-center">
                             <h5 class="card-title" id="navigator"></h5>
-                            <h1 class="white--text mb-2 display-1 text-xs-center">${ info.message }</h1>
                             <div class="subheading mb-3 text-xs-center">Served by <b>${ info.hostname }</b></div>
                             <v-btn class="red darken-2 mt-5" dark large @click="postBackend()">
                                 <v-badge left color="red">
@@ -123,12 +122,6 @@
                                 </v-badge>
                                 Ping
                             </v-btn>
-                            <template>
-                              <v-timeline>
-                                <v-timeline-item :color="tlColor1"><h3>${ tlName1 }</h3></v-timeline-item>
-                                <v-timeline-item :color="tlColor2"><h3 slot="opposite">${ tlName2 }</h3></v-timeline-item>
-                              </v-timeline>
-                            </template>
                         </div>
                     </div>
                 </div>
@@ -240,7 +233,7 @@
         window.addEventListener('load', () => {
 
             function getPlatform() {
-                var platform = ["Win32", "Android", "iOS"];
+                var platform = ["HP-UX", "Linux i686", "Linux armv7l", "Mac68K", "MacPPC", "MacIntel", "SunOS", "Win16", "Win32", "WinCE"];
 
                 for (var i = 0; i < platform.length; i++) {
 
